@@ -1,9 +1,9 @@
-﻿namespace SurveyBasket.Contracts.Responses;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class PollResponse
-{
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
+namespace SurveyBasket.Contracts.Responses;
 
-}
+public record PollResponse(
+    int Id,
+    string Title,
+    string Notes
+    );

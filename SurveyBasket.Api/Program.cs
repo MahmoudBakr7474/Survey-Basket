@@ -1,17 +1,9 @@
-using SurveyBasket.Services;
-using SurveyBasket.Services;
+using SurveyBasket;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDependencies();
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddEndpointsApiExplorer();
-
-
-builder.Services.AddOpenApi();
-builder.Services.AddScoped<IPollService, PollService>();
 
 var app = builder.Build();
 
